@@ -556,7 +556,7 @@ export default function DentalPlanningTool() {
               </p>
             </div>
             <a
-              href="https://www.utrgv.edu/student-success/for-students/pre-professional/index.htm"
+              href="https://www.utrgv.edu/studentsuccess/for-students/pre-professional/index.htm"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded transition-all"
