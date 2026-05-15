@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GraduationCap, PawPrint, ExternalLink } from 'lucide-react';
+import { GraduationCap, PawPrint, Pill, ExternalLink } from 'lucide-react';
 
 const BRAND = {
   orange:     '#F05023',
@@ -27,6 +27,13 @@ const TOOLS = [
     title: 'Veterinary School',
     degree: 'D.V.M.',
     description: 'Compare eligibility, prerequisites, and the VMCAS cycle for Texas veterinary schools.',
+  },
+  {
+    to: '/pharmacy',
+    Icon: Pill,
+    title: 'Pharmacy School',
+    degree: 'Pharm.D.',
+    description: 'Compare prerequisites across the nine Texas Pharm.D. programs and map your path through the PharmCAS cycle.',
   },
 ];
 
