@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Check, GraduationCap, Calendar, Info, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Check, GraduationCap, Calendar, Info, ExternalLink, ArrowLeft } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // BRAND TOKENS (UTRGV)
@@ -198,6 +199,10 @@ export default function DentalPlanningTool() {
       <header style={{ backgroundColor: 'white', borderBottom: `1px solid ${BRAND.grayLine}` }}>
         <div style={{ height: 4, backgroundColor: BRAND.orange }} />
         <div className="max-w-6xl mx-auto px-6 py-7">
+          <Link to="/" className="inline-flex items-center gap-1.5 mb-4" style={{ fontSize: 13, color: BRAND.gray, fontWeight: 600, textDecoration: 'none' }}>
+            <ArrowLeft size={14} />
+            All Planning Tools
+          </Link>
           <div className="flex items-start justify-between flex-wrap gap-4">
             <div>
               <div className="eyebrow" style={{ color: BRAND.gray }}>
