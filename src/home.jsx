@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GraduationCap, PawPrint, Pill, ExternalLink } from 'lucide-react';
+import { GraduationCap, PawPrint, Pill, Stethoscope, ExternalLink } from 'lucide-react';
 
 const BRAND = {
   orange:     '#F05023',
@@ -34,6 +34,13 @@ const TOOLS = [
     title: 'Pharmacy School',
     degree: 'Pharm.D.',
     description: 'Compare prerequisites across the nine Texas Pharm.D. programs and map your path through the PharmCAS cycle.',
+  },
+  {
+    to: '/physician-assistant',
+    Icon: Stethoscope,
+    title: 'Physician Assistant',
+    degree: 'MPAS / MMS',
+    description: 'Compare prerequisites and admission requirements across sixteen Texas PA programs and navigate the CASPA application cycle.',
   },
 ];
 
