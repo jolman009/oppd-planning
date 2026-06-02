@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import {
   Check, ExternalLink, Info, AlertTriangle, Stethoscope, Award,
-  FileText, Send, Building2, CalendarClock
+  FileText, Send, Building2
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -197,6 +197,16 @@ const PATHWAY = [
 // ─────────────────────────────────────────────────────────────────────────────
 // COMPONENT
 // ─────────────────────────────────────────────────────────────────────────────
+const Yes = ({ size = 22 }) => (
+  <div role="img" aria-label="Required" className="flex items-center justify-center rounded-full mx-auto"
+    style={{ width: size, height: size, backgroundColor: BRAND.orange }}>
+    <Check size={Math.round(size * 0.55)} color="white" strokeWidth={3} />
+  </div>
+);
+const Dash = () => (
+  <div role="img" aria-label="Not required" className="text-center" style={{ color: '#C8C8CD', fontSize: 17, lineHeight: 1 }}>—</div>
+);
+
 export default function MedicinePlanningTool() {
   const [selected, setSelected] = useState(SCHOOLS.map(s => s.id));
   const [activeYear, setActiveYear] = useState(1);
@@ -218,16 +228,6 @@ export default function MedicinePlanningTool() {
   const toggleSchool = (id) => {
     setSelected(prev => prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]);
   };
-
-  const Yes = ({ size = 22 }) => (
-    <div role="img" aria-label="Required" className="flex items-center justify-center rounded-full mx-auto"
-      style={{ width: size, height: size, backgroundColor: BRAND.orange }}>
-      <Check size={Math.round(size * 0.55)} color="white" strokeWidth={3} />
-    </div>
-  );
-  const Dash = () => (
-    <div role="img" aria-label="Not required" className="text-center" style={{ color: '#C8C8CD', fontSize: 17, lineHeight: 1 }}>—</div>
-  );
 
   const activeTimeline = UNDERGRAD_TIMELINE.find(t => t.year === activeYear);
 

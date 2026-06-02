@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Check, X as XIcon, GraduationCap, Calendar, Info, ExternalLink,
-  PawPrint, Clock, FileText, Award, Send, Building2, Stethoscope, ChevronRight, ArrowLeft
+  Check, X as XIcon, Calendar, Info, ExternalLink,
+  FileText, Award, Send, Building2, Stethoscope, ChevronRight, ArrowLeft
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import {
   Check, ExternalLink, Info, AlertTriangle, Activity, Award,
-  FileText, Send, Building2, Layers
+  FileText, Send, Building2
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -266,6 +266,24 @@ const PATHWAY = [
 // ─────────────────────────────────────────────────────────────────────────────
 // COMPONENT
 // ─────────────────────────────────────────────────────────────────────────────
+const Yes = ({ size = 22 }) => (
+  <div role="img" aria-label="Required" className="flex items-center justify-center rounded-full mx-auto"
+    style={{ width: size, height: size, backgroundColor: BRAND.orange }}>
+    <Check size={Math.round(size * 0.55)} color="white" strokeWidth={3} />
+  </div>
+);
+const Dash = ({ label = 'Not required' }) => (
+  <div role="img" aria-label={label} className="text-center" style={{ color: '#C8C8CD', fontSize: 17, lineHeight: 1 }}>—</div>
+);
+const LettersCell = ({ value }) => {
+  if (value === null || value === undefined) return <Dash label="Unclear in source" />;
+  return <span className="font-display num-rail" style={{ fontSize: 17, color: BRAND.orangeDark, lineHeight: 1 }}>{value}</span>;
+};
+const ShadowCell = ({ value }) => {
+  if (!value) return <Dash label="Not specified" />;
+  return <span style={{ fontSize: 12, fontWeight: 700, color: BRAND.grayInk }}>{value}</span>;
+};
+
 export default function PTPlanningTool() {
   const [selected, setSelected] = useState(SCHOOLS.map(s => s.id));
   const [activeYear, setActiveYear] = useState(1);
@@ -288,25 +306,6 @@ export default function PTPlanningTool() {
 
   const toggleSchool = (id) => {
     setSelected(prev => prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]);
-  };
-
-  const Yes = ({ size = 22 }) => (
-    <div role="img" aria-label="Required" className="flex items-center justify-center rounded-full mx-auto"
-      style={{ width: size, height: size, backgroundColor: BRAND.orange }}>
-      <Check size={Math.round(size * 0.55)} color="white" strokeWidth={3} />
-    </div>
-  );
-  const Dash = ({ label = 'Not required' }) => (
-    <div role="img" aria-label={label} className="text-center" style={{ color: '#C8C8CD', fontSize: 17, lineHeight: 1 }}>—</div>
-  );
-
-  const LettersCell = ({ value }) => {
-    if (value === null || value === undefined) return <Dash label="Unclear in source" />;
-    return <span className="font-display num-rail" style={{ fontSize: 17, color: BRAND.orangeDark, lineHeight: 1 }}>{value}</span>;
-  };
-  const ShadowCell = ({ value }) => {
-    if (!value) return <Dash label="Not specified" />;
-    return <span style={{ fontSize: 12, fontWeight: 700, color: BRAND.grayInk }}>{value}</span>;
   };
 
   const activeTimeline = UNDERGRAD_TIMELINE.find(t => t.year === activeYear);

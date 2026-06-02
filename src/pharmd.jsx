@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Check, GraduationCap, Calendar, Info, ExternalLink, AlertTriangle,
-  Pill, FileText, Award, Send, Building2, ChevronRight, BookOpen
+  Check, Info, ExternalLink, AlertTriangle,
+  Pill, FileText, Award, Send, Building2
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────

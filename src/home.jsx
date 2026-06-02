@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { GraduationCap, PawPrint, Pill, Stethoscope, Heart, HandHelping, Activity, ExternalLink } from 'lucide-react';
 
