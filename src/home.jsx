@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GraduationCap, PawPrint, Pill, Stethoscope, ExternalLink } from 'lucide-react';
+import { GraduationCap, PawPrint, Pill, Stethoscope, Heart, HandHelping, Activity, ExternalLink } from 'lucide-react';
 
 const BRAND = {
   orange:     '#F05023',
@@ -41,6 +41,27 @@ const TOOLS = [
     title: 'Physician Assistant',
     degree: 'MPAS / MMS',
     description: 'Compare prerequisites and admission requirements across sixteen Texas PA programs and navigate the CASPA application cycle.',
+  },
+  {
+    to: '/medicine',
+    Icon: Heart,
+    title: 'Medical School',
+    degree: 'M.D. / D.O.',
+    description: 'Compare prerequisites and admission requirements across Texas medical schools and navigate the AMCAS/AACOMAS application cycle.',
+  },
+  {
+    to: '/occupational-therapy',
+    Icon: HandHelping,
+    title: 'Occupational Therapy',
+    degree: 'OTD / MOT',
+    description: 'Compare prerequisites and admission requirements across Texas occupational therapy programs and navigate the OTCAS application cycle.',
+  },
+  {
+    to: '/physical-therapy',
+    Icon: Activity,
+    title: 'Physical Therapy',
+    degree: 'DPT',
+    description: 'Compare prerequisites and admission requirements across Texas physical therapy programs and navigate the PTCAS application cycle.',
   },
 ];
 

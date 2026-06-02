@@ -18,11 +18,15 @@ UTRGV Office of Pre-Professional Development (OPPD) planning tools — a React S
 
 **Stack:** React 19 + Vite 8 + Tailwind CSS 4 + React Router 7 (HashRouter)
 
-**Routing (`src/main.jsx`):** HashRouter with four routes:
+**Routing (`src/main.jsx`):** HashRouter with eight routes:
 - `/` → `home.jsx` (landing hub with cards linking to each tool)
 - `/dental` → `dental.jsx` (4 Texas dental schools)
 - `/veterinary` → `veterinarian.jsx` (2 Texas vet schools)
 - `/pharmacy` → `pharmd.jsx` (9 Texas pharmacy programs)
+- `/physician-assistant` → `physician_assistant.jsx` (16 Texas PA programs)
+- `/medicine` → `medicine.jsx` (Texas medical schools)
+- `/occupational-therapy` → `occupational_therapy.jsx` (Texas OT programs)
+- `/physical-therapy` → `physical_therapy.jsx` (Texas PT programs)
 
 **Component pattern:** Each planning tool (dental, veterinary, pharmacy) is a single self-contained file following the same structure:
 1. **Data arrays** defined at top of file — `SCHOOLS`, `CATEGORIES` (prerequisite groups), `TIMELINE`, application steps/deadlines
